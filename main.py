@@ -15,7 +15,7 @@ def shadow_crop(image):
     contours, _ = cv2.findContours(closed.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)   # Finding mask image lines
     contours_xy = np.array(contours)     # Image convert to array
 
-    # x min max 
+    # Calculate x min max
     x_min, x_max = 0, 0
     value = list()
     for i in range(len(contours_xy)):
